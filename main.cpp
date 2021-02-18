@@ -2,27 +2,26 @@
 
 #include <iostream>
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>     /*Подключаем необходимые библиотеки*/
 #include <string.h>
 #include "calc_data.h"
 using namespace std;
-using std::cout;
+using std::cout;        /*Пространство имен*/
 using std::cin;
-
 
 /*__________________________________________________*/
 
 struct date
 {
   int day;
-  int month;
+  int month;      /*Объявляем структуру для даты*/
   int year;
 }; 
  
 struct students
 {
-  char *lastName;
-  date std_dt;
+  char *lastName;       /*Объявляем структуру для студентов*/
+  date std_dt;          /*Подключаем структуру "date" как часть и записываем ее как "std_dt*/
 };
 
 void showALL(students STD1)
@@ -38,10 +37,6 @@ int main()
     setlocale (LC_ALL, "rus");
     int month, day, year;
     int month2, day2, year2;
-
-    /* cout << "Введите число, месяц и год: ";
-    cin>> day >> month >> year;
-    cout << endl; */
 
     students std_1;
     std_1.lastName = "Иванов";
